@@ -22,7 +22,11 @@ const io = socket(server, {
 });
 
 //middleware
-app.use(cors());
+app.use(cors({
+  origin: "https://harshal-chat-app-frontend.onrender.com",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
 app.use(express.json());
 
 //connect to db
