@@ -15,7 +15,7 @@ const app = express();
 const server = http.createServer(app);
 const io = socket(server, {
   cors: {
-    origin: ["https://harshal-chat-app-frontend.onrender.com"],
+    origin: "https://harshal-chat-app-frontend.onrender.com",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   },
